@@ -1,0 +1,126 @@
+<div class="container">
+  <h2>จัดการสต็อกสินค้า (Product Management)</h2>
+
+  <div class="container">
+    <h2>เพิ่มสินค้าใหม่</h2>
+    <form [formGroup]="productForm" (ngSubmit)="addProduct()" class="product-form">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>ชื่อสินค้า</label>
+          <input type="text" formControlName="name" placeholder="ระบุชื่อสินค้า" />
+          @if (productForm.get('name')?.invalid) {
+            <small class="error">ชื่อสินค้าต้องมีอย่างน้อย 3 ตัวอักษร</small>
+          }
+        </div>
+
+        <div class="form-group">
+          <label>SKU</label>
+          <input type="text" formControlName="sku" placeholder="เช่น ABC-123" />
+          @if (productForm.get('sku')?.hasError('required')) {
+            <small class="error">กรุณาระบุ SKU</small>
+          }
+          @if (productForm.get('sku')?.hasError('skuTaken')) {
+            <small class="error">SKU นี้มีในระบบแล้ว</small>
+          }
+        </div>
+
+        <div class="form-group">
+          <label>ราคา</label>
+          <input type="number" formControlName="price" />
+          @if (productForm.get('price')?.hasError('min')) {
+            <small class="error">ราคาต้องมากกว่า 0</small>
+          }
+        </div>
+
+        <div class="form-group">
+          <label>สต็อก</label>
+          <input type="number" formControlName="stock" />
+          @if (productForm.get('stock')?.hasError('min')) {
+            <small class="error">สต็อกต้องไม่ติดลบ</small>
+          }
+        </div>
+
+        <div class="form-group">
+          <label>หมวดหมู่</label>
+          <select formControlName="category">
+            <option value="">เลือกหมวดหมู่</option>
+            @for (cat of categories; track cat) {
+              <option [value]="cat">{{ cat }}</option>
+            }
+          </select>
+          @if (productForm.get('category')?.touched && productForm.get('category')?.invalid) {
+            <small class="error">กรุณาเลือกหมวดหมู่</small>
+          }
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="productForm.invalid" class="add-btn">เพิ่มสินค้า</button>
+    </form>
+
+    <hr />
+  </div>
+
+  <div class="filter-section">
+    <label for="catFilter">กรองตามหมวดหมู่: </label>
+    <select id="catFilter" [(ngModel)]="selectedCategory">
+      <option value="">ทั้งหมด (All)</option>
+      @for (cat of categories; track cat) {
+        <option [value]="cat">{{ cat }}</option>
+      }
+    </select>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>รหัสสินค้า (SKU)</th>
+        <th>ชื่อสินค้า</th>
+        <th>หมวดหมู่</th>
+        <th>ราคา</th>
+        <th>จำนวนคงเหลือ</th>
+        <th>action</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (product of filteredProducts(); track product.id) {
+        <tr [class.out-of-stock-row]="product.stock === 0">
+          <td>{{ product.sku }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.category }}</td>
+          <td>{{ product.price | number }} ฿</td>
+
+          <td [class.low-stock-text]="product.stock < 10 && product.stock > 0">
+            @if (product.stock === 0) {
+              <span style="color: red; font-weight: bold">สินค้าหมด</span>
+            } @else {
+              {{ product.stock }}
+            }
+          </td>
+          <td>
+            <button
+              class="sell-btn"
+              (click)="sellProduct(product.id)"
+              [disabled]="product.stock === 0"
+            >
+              ขาย
+            </button>
+          </td>
+        </tr>
+      } @empty {
+        <tr>
+          <td colspan="5" style="text-align: center">ไม่พบสินค้าในหมวดหมู่นี้</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+  <div class="summary-section">
+    <div class="summary-card">
+      <span class="label">จำนวนสินค้าทั้งหมด : </span>
+      <span class="value"> {{ totalItems() }} รายการ</span>
+    </div>
+    <div class="summary-card">
+      <span class="label">มูลค่ารวมในสต็อก : </span>
+      <span class="value highlight"> {{ totalValue() | number: '1.2-2' }} ฿</span>
+    </div>
+  </div>
+</div>
