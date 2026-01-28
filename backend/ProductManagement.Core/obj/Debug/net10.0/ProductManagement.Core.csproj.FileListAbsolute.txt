@@ -1,0 +1,13 @@
+C:\FlowAccount\backend\ProductManagement.Core\bin\Debug\net10.0\ProductManagement.Core.deps.json
+C:\FlowAccount\backend\ProductManagement.Core\bin\Debug\net10.0\ProductManagement.Core.dll
+C:\FlowAccount\backend\ProductManagement.Core\bin\Debug\net10.0\ProductManagement.Core.pdb
+C:\FlowAccount\backend\ProductManagement.Core\obj\Debug\net10.0\ProductManagement.Core.csproj.AssemblyReference.cache
+C:\FlowAccount\backend\ProductManagement.Core\obj\Debug\net10.0\ProductManagement.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\FlowAccount\backend\ProductManagement.Core\obj\Debug\net10.0\ProductManagement.Core.AssemblyInfoInputs.cache
+C:\FlowAccount\backend\ProductManagement.Core\obj\Debug\net10.0\ProductManagement.Core.AssemblyInfo.cs
+C:\FlowAccount\backend\ProductManagement.Core\obj\Debug\net10.0\ProductManagement.Core.csproj.CoreCompileInputs.cache
+C:\FlowAccount\backend\ProductManagement.Core\obj\Debug\net10.0\ProductManagement.Core.sourcelink.json
+C:\FlowAccount\backend\ProductManagement.Core\obj\Debug\net10.0\ProductManagement.Core.dll
+C:\FlowAccount\backend\ProductManagement.Core\obj\Debug\net10.0\refint\ProductManagement.Core.dll
+C:\FlowAccount\backend\ProductManagement.Core\obj\Debug\net10.0\ProductManagement.Core.pdb
+C:\FlowAccount\backend\ProductManagement.Core\obj\Debug\net10.0\ref\ProductManagement.Core.dll

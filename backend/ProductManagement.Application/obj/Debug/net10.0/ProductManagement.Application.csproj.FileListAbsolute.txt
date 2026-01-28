@@ -1,0 +1,16 @@
+C:\FlowAccount\backend\ProductManagement.Application\bin\Debug\net10.0\ProductManagement.Application.deps.json
+C:\FlowAccount\backend\ProductManagement.Application\bin\Debug\net10.0\ProductManagement.Application.dll
+C:\FlowAccount\backend\ProductManagement.Application\bin\Debug\net10.0\ProductManagement.Application.pdb
+C:\FlowAccount\backend\ProductManagement.Application\bin\Debug\net10.0\ProductManagement.Core.dll
+C:\FlowAccount\backend\ProductManagement.Application\bin\Debug\net10.0\ProductManagement.Core.pdb
+C:\FlowAccount\backend\ProductManagement.Application\obj\Debug\net10.0\ProductManagement.Application.csproj.AssemblyReference.cache
+C:\FlowAccount\backend\ProductManagement.Application\obj\Debug\net10.0\ProductManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\FlowAccount\backend\ProductManagement.Application\obj\Debug\net10.0\ProductManagement.Application.AssemblyInfoInputs.cache
+C:\FlowAccount\backend\ProductManagement.Application\obj\Debug\net10.0\ProductManagement.Application.AssemblyInfo.cs
+C:\FlowAccount\backend\ProductManagement.Application\obj\Debug\net10.0\ProductManagement.Application.csproj.CoreCompileInputs.cache
+C:\FlowAccount\backend\ProductManagement.Application\obj\Debug\net10.0\ProductManagement.Application.sourcelink.json
+C:\FlowAccount\backend\ProductManagement.Application\obj\Debug\net10.0\ProductM.070BD2B7.Up2Date
+C:\FlowAccount\backend\ProductManagement.Application\obj\Debug\net10.0\ProductManagement.Application.dll
+C:\FlowAccount\backend\ProductManagement.Application\obj\Debug\net10.0\refint\ProductManagement.Application.dll
+C:\FlowAccount\backend\ProductManagement.Application\obj\Debug\net10.0\ProductManagement.Application.pdb
+C:\FlowAccount\backend\ProductManagement.Application\obj\Debug\net10.0\ref\ProductManagement.Application.dll

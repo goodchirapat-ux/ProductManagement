@@ -1,0 +1,6 @@
+{
+  "ProductManagement.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\FlowAccount\\backend\\ProductManagement.Api",
+  "ProductManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\FlowAccount\\backend\\ProductManagement.Application",
+  "ProductManagement.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\FlowAccount\\backend\\ProductManagement.Core",
+  "ProductManagement.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\FlowAccount\\backend\\ProductManagement.Infrastructure"
+}
