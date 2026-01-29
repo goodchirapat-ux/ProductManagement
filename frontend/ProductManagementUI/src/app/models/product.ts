@@ -1,9 +1,4 @@
-export enum Category {
-  FOOD = 'อาหาร',
-  DRINK = 'เครื่องดื่ม',
-  HOUSEHOLD = 'ของใช้',
-  CLOTHING = 'เสื้อผ้า',
-}
+import { Category } from '@core/constants';
 
 export interface Product {
   id: number;
@@ -11,6 +6,6 @@ export interface Product {
   sku: string;
   price: number;
   stock: number;
-  category: Category; // Use the Enum here
+  category: Category;
   createdAt: Date;
 }
